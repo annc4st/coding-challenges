@@ -18,7 +18,10 @@
   },
   "homepage": "https://github.com/annc4st/fun-katas#readme",
   "devDependencies": {
-    "jest": "^29.7.0"
+    "@types/node": "^25.3.3",
+    "jest": "^29.7.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
   },
   "dependencies": {
     "ansi-escapes": "^4.3.2",

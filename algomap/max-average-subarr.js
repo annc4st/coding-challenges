@@ -41,3 +41,23 @@ function findMaxAverage(nums, k) {
 
 console.log(findMaxAverage([1, 12, -5, -6, 50, 3], 4));
 console.log(findMaxAverage([5], 1));
+
+// Secodn solution
+
+function findMaxAverage2(nums, k) {
+
+    let maxSum = 0;
+    let n = nums.length;
+
+    for (let i = 0; i < k; i++) {
+        maxSum += nums[i];
+    }
+    let maxAverage = maxSum / k;
+
+    for (let j = k; j<n; j++) {
+        maxSum += nums[j] - nums[j-k];
+        
+        maxAverage = Math.max(maxAverage, maxSum / k);
+    }
+    return maxAverage;
+};
